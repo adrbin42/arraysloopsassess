@@ -3,17 +3,42 @@
 var sports = ['soccer', 'baseball'];
 var total = sports.push('football', 'swimming');
 // A:
-// sports = <your answer>
-// total = <your answer>
+function listValue(array) {
+  for(var i = 0;array.length;i++){
+    console.log(array[i]);
+  }
+}
+
+// sports = soccer, baseball
+// total = soccer, baseball, football, swimming
 
 
 // 2.
 // Using the `strings` array, wrte a function `longestString()`
 // that accepts an array argument and returns the longest string in the array
 var strings = ['this','is','a','collection','of','words'];
+wordLength = [];
 // A:
+function longestString(array){
+  var letterCount;
+  var largestValue;
+  var prevWordLength = 0;
+  var highNumWord;
+  var wordLength;
+  for(var i = 0;i<array.length;i++){
+    wordLength = array[i].length;
+    console.log(wordLength);
+    prevWordLength = wordLength;
+    console.log(prevWordLength);
+    if(wordLength > prevWordLength){
+      highNumWord = array[i];
+    }
+    console.log(highNumWord);
+  }
 
-
+  return highNumWord;
+}
+longestString(strings);
 console.assert(longestString(strings) === 'collection', {"message": "longestString should return 'collection'"});
 
 
